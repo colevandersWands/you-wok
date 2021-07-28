@@ -3,7 +3,7 @@ import { bases, sizes } from './ingredients.js';
 import { labeledLogger } from './labeled-logger.js';
 const log = labeledLogger(Date.now());
 
-const STATUSES = {
+export const STATUSES = {
   NEW: 'NEW',
   VEGGIES_ADDED: 'VEGGIES ADDED',
   TOPPING_SELECTED: 'TOPPING SELECTED',
@@ -66,7 +66,7 @@ export const addVegetables = meal => {
 };
 
 export const addTopping = (meal, topping) => {
-  log('prepare portion:', size, base);
+  log('adding topping:', meal, topping);
   return new Promise((resolve, reject) => {
     if (meal.status !== STATUSES.VEGGIES_ADDED) {
       reject('The topping has to be added directly after the veggies!');

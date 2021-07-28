@@ -6,17 +6,17 @@ export const sizes = {
 
 export const bases = {
   whiteRice: "White Rice",
-  fineNoodles: "Fie noodles",
+  fineNoodles: "Fine noodles",
   riceNoodles: 'Rice noodles'
 }
 
 export const toppings = {
   vegetarian: {name: 'Vegetarian', price: 1.5, minDuration: 200, maxDuration: 300},
   tofu: {name: 'Tofu', price: 1.7, minDuration: 300, maxDuration: 700},
-  kip: {name: 'Chicken', price: 1.9, minDuration: 200, maxDuration: 400},
+  chicken: {name: 'Chicken', price: 1.9, minDuration: 200, maxDuration: 400},
   beef: {name: 'Beef', price: 2.2, minDuration: 300, maxDuration: 300},
   shellfish: {name: 'Shellfish', price: 2.2, minDuration: 200, maxDuration: 600},
-  Calamari: {name: 'Calamari', price: 2.2, minDuration: 100, maxDuration: 300},
+  calamari: {name: 'Calamari', price: 2.2, minDuration: 100, maxDuration: 300},
   shrimps: {name: 'Shrimps', price: 2.4, minDuration: 100, maxDuration: 500},
 };
 

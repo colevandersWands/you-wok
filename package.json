@@ -1,0 +1,19 @@
+{
+  "name": "you-wok",
+  "version": "1.0.0",
+  "description": "Exercises on the use of promises",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colevandersWands/you-wok.git"
+  },
+  "author": "HackYourFuture Belgium",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colevandersWands/you-wok/issues"
+  },
+  "homepage": "https://github.com/colevandersWands/you-wok#readme"
+}
