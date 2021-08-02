@@ -1,8 +1,5 @@
 import { bases, sizes } from './ingredients.js';
 
-import { labeledLogger } from './labeled-logger.js';
-const log = labeledLogger(Date.now());
-
 export const STATUSES = {
   NEW: 'NEW',
   VEGGIES_ADDED: 'VEGGIES ADDED',
@@ -11,13 +8,11 @@ export const STATUSES = {
   DONE: 'DONE',
   BAGGED: 'BAGGED',
 };
-function getRandomInRange(min, max) {
-  return Math.random() * (max - min) + min;
-}
+
+const getRandomInRange = (min, max) => Math.random() * (max - min) + min;
 
 let portionCtr = 1;
 export const preparePortion = (size, base) => {
-  log('prepare portion:', size, base);
   return new Promise((resolve, reject) => {
     if (![sizes.large, sizes.medium, sizes.large].includes(size)) {
       reject('Invalid size!');
@@ -49,7 +44,6 @@ export const preparePortion = (size, base) => {
 };
 
 export const addVegetables = meal => {
-  log('add vegetables:', meal);
   return new Promise((resolve, reject) => {
     if (meal.status !== STATUSES.NEW) {
       reject(
@@ -66,7 +60,6 @@ export const addVegetables = meal => {
 };
 
 export const addTopping = (meal, topping) => {
-  log('adding topping:', meal, topping);
   return new Promise((resolve, reject) => {
     if (meal.status !== STATUSES.VEGGIES_ADDED) {
       reject('The topping has to be added directly after the veggies!');
